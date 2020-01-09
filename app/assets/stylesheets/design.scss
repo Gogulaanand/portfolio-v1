@@ -1,3 +1,8 @@
+@mixin proj-card-background{
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
 body{
 	font-family: 'Montserrat',sans-serif;
 	display: flex;
@@ -63,10 +68,25 @@ nav ul li a:hover:after{
 	align-items: center;
 	line-height: 1.2;
 }
-.intro h1{
+.myname{
 	font-size: 4em;
 	justify-self: center;
 	color: #b7b8b6;
+	margin: 0 auto;
+	overflow: hidden;
+	white-space: nowrap;
+	border-right: 0.1em solid #000;
+	animation: typing 2s steps(40,end), 
+			   blinking-caret 0.75s infinite;
+}
+@keyframes typing{
+	0% { width: 0 }
+	100% { width: 100% }
+
+}
+@keyframes blinking-caret{
+	0%, 100% { border-color: transparent; }
+	50% { border-color: #000; }
 }
 .intro p{
 	justify-self: center;
@@ -103,27 +123,19 @@ nav ul li a:hover:after{
 }
 #proj1{
 	background-image: url(https://screenshot.codepen.io/3887570.vYEmWGe.f3731e83-19d6-4bc1-870b-d702f389036b.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+	@include proj-card-background;
 }
 #proj2{
 	background-image: url(https://screenshot.codepen.io/3887570.qBEjLvy.small.46c2250f-9868-4fc5-ae2e-bd6e4532654e.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+	@include proj-card-background;
 }
 #proj3{
 	background-image: url(https://screenshot.codepen.io/3887570.oNgBNrV.small.0960e43f-268f-4068-988e-0e11b65da768.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+	@include proj-card-background;
 }
 #proj4{
 	background-image: url(https://screenshot.codepen.io/3887570.gObwVoR.small.b29e075c-4b08-4aff-90f2-027d60f68877.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+	@include proj-card-background;
 }
 .project-tile{
 	width: 300px;
@@ -139,14 +151,14 @@ nav ul li a:hover:after{
 	transition: ease 1s all;
 	display: flex;
 	flex-direction: column;
-}
-.project-tile:hover{
-	transform: scale(1.2);
-	box-shadow:
+	&:hover{
+		transform: scale(1.2);
+		box-shadow:
 		12px 4.7px 9px rgba(0, 0, 0, 0.053),
 		16px 15.9px 30.2px rgba(0, 0, 0, 0.077),
 		25px 71px 135px rgba(0, 0, 0, 0.13);
-	overflow: hidden;
+		overflow: hidden;
+		}
 }
 .project-tile p{
 	color: #000;
