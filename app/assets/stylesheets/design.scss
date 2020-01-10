@@ -32,7 +32,7 @@
 	}
 }
 body{
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'Helvetica Neue', 'Montserrat',sans-serif;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -253,12 +253,7 @@ nav ul li a:hover:after{
 	@include prefix-for-rotate-anim;
 }
 @-moz-keyframes rotate360{
-	0%{
-		-moz-transform: rotate(0deg);
-	}
-	100%{
-		-moz-transform: rotate(360deg);
-	}
+	@include prefix-for-rotate-anim;
 }
 @-o-keyframes rotate360{
 	@include prefix-for-rotate-anim;
