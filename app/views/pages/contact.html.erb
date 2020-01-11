@@ -1,15 +1,16 @@
 <script data-cfasync="false" type="text/javascript" src="../assets/javascripts/form_submission_handler.js"></script>
+<script type="text/javascript" src="../assets/javascripts/replace_submit_button.js"></script>
 <section id="contact-section">
   <h1>Thank you for taking your time to look at my portfolio.</h1>
   <h2>You can contact me through any of the below mediums</h2>
-  <div class="dummy">
+  <div class="contactFormSection">
     <div class="innerContainer">
       <div class="window">
         <div class="header">
         </div>
         <div class="textPh">
           <h1 id="desc-text">CONTACT ME</h1>
-          <p id="mobile-no">Phone: +91 123 456 789</p>
+          <p id="mobile-no">Phone: +91 8667457348</p>
         </div>
         <div class="contactForm">
           <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxwMQxmKtl35MhitmiXWFD8llm0q9nL7avqe_SF_sEfawer9eDR/exec" data-email="gogulaanand02@gmail.com">
@@ -19,7 +20,11 @@
             <label>
               <textarea class="margin25" placeholder="Message" rows='10' name="message"></textarea>
             </label>
-            <label><input type="submit" value="SEND" class="submit"></label>
+            <div class="submitSection">
+              <label>
+                <input type="submit" class="submitButton" value="Submit">
+              </label>
+            </div>
           </form>
         </div>
       </div>

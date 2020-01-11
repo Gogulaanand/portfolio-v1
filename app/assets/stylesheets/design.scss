@@ -3,6 +3,10 @@
 	background-size: contain;
 	background-position: center;
 }
+@mixin flex-col{
+	display: flex;
+	flex-direction: column;
+}
 @mixin enlarge-anim($time, $behaviour){
 	-webkit-animation: enlarge $time $behaviour;
 	-moz-animation: enlarge $time $behaviour;
@@ -33,8 +37,7 @@
 }
 body{
 	font-family: 'Helvetica Neue', 'Montserrat',sans-serif;
-	display: flex;
-	flex-direction: column;
+	@include flex-col;
 	align-items: center;
 	text-align: center;
 }
@@ -87,8 +90,7 @@ nav ul li a:hover:after{
 }
 .intro{
 	margin-top: 100px;
-	display: flex;
-	flex-direction: column;
+	@include flex-col;
 	align-items: center;
 	line-height: 1.2;
 }
@@ -117,8 +119,7 @@ nav ul li a:hover:after{
 }
 .about{
 	margin: 100px 0 0 0;
-	display: flex;
-	flex-direction: column;
+	@include flex-col;
 	align-items: center;
 }
 .about h1{
@@ -132,8 +133,7 @@ nav ul li a:hover:after{
 }
 #projects{
 	margin: 100px 0 0 0;
-	display: flex;
-	flex-direction: column;
+	@include flex-col;
 	align-items: center;
 }
 #proj-cards{
@@ -159,6 +159,14 @@ nav ul li a:hover:after{
 }
 #proj4{
 	background-image: url(https://screenshot.codepen.io/3887570.gObwVoR.small.b29e075c-4b08-4aff-90f2-027d60f68877.png);
+	@include proj-card-background;
+}
+#proj5{
+	background-image: url(https://screenshot.codepen.io/3887570.abzYNYm.small.6df8a1f7-8c5e-4534-8ff5-41f281afeb68.png);
+	@include proj-card-background;
+}
+#proj6{
+	background-image: url(https://screenshot.codepen.io/3887570.abzEMQP.small.41a83099-db7f-4305-9c9e-e1beace262b9.png);
 	@include proj-card-background;
 }
 .project-tile{
@@ -187,23 +195,18 @@ nav ul li a:hover:after{
 .project-tile p{
 	color: #000;
 }
-@mixin flex-col{
-	display: flex;
-	flex-direction: column;
-}
 @mixin input-margin{
 	margin: 20px 0 20px 0;
 }
 #contact-section{
 	margin: 2% 0 0 0;
-	display: flex;
-	flex-direction: column;
+	@include flex-col;
 	flex-gap: 20px;
 	align-items: center;
 	justify-item: space-evenly;
 	color: #A0A0A0;
 }
-.dummy{
+.contactFormSection{
 	margin: 50px 0 100px 0;
 }
 .window{
@@ -213,7 +216,7 @@ nav ul li a:hover:after{
 	width: 850px;
 	color: #fff;
 	border-radius: 15px;
-	background-color:#fff;
+	background-color:#808080;
 	-webkit-box-shadow: 9px 9px 37px -7px rgba(0,0,0,0.69);
 	-moz-box-shadow: 9px 9px 37px -7px rgba(0,0,0,0.69);
 	box-shadow: 9px 9px 37px -7px rgba(0,0,0,0.69);
@@ -225,7 +228,10 @@ nav ul li a:hover:after{
 	width: 50%;
 	margin: 30px;
 	justify-content: space-between;
-	background: #4d4d4f;
+	border-radius: 27px;
+	background: #808080;
+	box-shadow: 10px 10px 33px #babbb9, 
+            -10px -10px 33px #f2f3f1;
 	text-align: center;
 	border-radius: 8%
 }
@@ -234,7 +240,6 @@ nav ul li a:hover:after{
 	width: 50%;
 	margin: 30px;
 	align-items: space-evenly;
-	margin-left: -20px;
 }
 .contact{
 	@include flex-col;
@@ -259,13 +264,23 @@ textarea{
 textarea:focus{
 	border-color: #000;
 }
+.submitButton{
+	font-size: 16px;
+	border: 2px solid #fff;
+	background-color: #808080;
+	color: #fff;
+	width: 4em;
+	height: 2em;
+	margin-top: 10px;
+	padding: 0.25em;
+	&:hover{
+		background-color: #fff;
+		color: #000;
+		border: 2px solid #000;
+	}
+}
 .margin25{
 	@include input-margin;
-}
-.submit{
-	margin-top: 10px;
-	border: none;
-	background-color: inherit;
 }
 .fa{
 	margin: 30px;
