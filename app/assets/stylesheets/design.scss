@@ -1,7 +1,7 @@
 @mixin proj-card-background{
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: center;
+	background-position: top center;
 }
 @mixin flex-col{
 	display: flex;
@@ -133,6 +133,7 @@ nav ul li a:hover:after{
 }
 #projects{
 	margin: 100px 0 0 0;
+	width: 75%;
 	@include flex-col;
 	align-items: center;
 }
@@ -169,22 +170,24 @@ nav ul li a:hover:after{
 	background-image: url(https://screenshot.codepen.io/3887570.abzEMQP.small.41a83099-db7f-4305-9c9e-e1beace262b9.png);
 	@include proj-card-background;
 }
+#hide-svg{
+	display: none;
+}
 .project-tile{
 	width: 300px;
 	height: 240px;
 	margin: 25px;
-	border-radius: 8px;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
-		0 2px 2px rgba(0,0,0,0.11), 
-		0 4px 4px rgba(0,0,0,0.11), 
-		0 6px 8px rgba(0,0,0,0.11),
-		0 8px 16px rgba(0,0,0,0.11);
-	background: #f1f1f1;
+	border-radius: 10px;
+	background: linear-gradient(225deg, #ffffff, #e6e6e6);
+	box-shadow: -30px 30px 60px #d9d9d9, 
+            30px -30px 60px #ffffff;
+	background: #fff;
 	transition: ease 1s all;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-end;
 	&:hover{
-		transform: scale(1.2);
+		transform: scale(1.1);
 		box-shadow:
 		12px 4.7px 9px rgba(0, 0, 0, 0.053),
 		16px 15.9px 30.2px rgba(0, 0, 0, 0.077),
@@ -192,8 +195,18 @@ nav ul li a:hover:after{
 		overflow: hidden;
 		}
 }
-.project-tile p{
-	color: #000;
+svg{
+	width: 50px;
+	height: 50px;
+}
+.project-tile > *{
+	text-decoration: none;
+}
+.project-controls{
+	margin-left: 14px;
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
 }
 @mixin input-margin{
 	margin: 20px 0 20px 0;
@@ -286,7 +299,6 @@ textarea:focus{
 	margin: 30px;
 	text-decoration: none;
 	text-align: center;
-	font-size: 100px;
 	&:hover{
 		text-shadow: 0px 12px 11px rgba(0, 0, 0, 0.4);
 	}
@@ -349,28 +361,20 @@ textarea:focus{
 @keyframes rotate360{
 	@include prefix-for-rotate-anim;
 }
-@media only screen and (max-width: 770px){
-	#contact-section h1{
-		font-size:26px;
+@media only screen and (max-width: 800px){
+	nav ul{
+		justify-content: space-evenly;
 	}
-	#contact-section h2{
-		font-size:20px;
+	h1, h2, p{
+		overflow-wrap: break-word;
 	}
 }
-@media only screen and (max-width: 750px){
-	#contact-section h1{
-		font-size:24px;
+@media only screen and (max-width: 500px){
+	nav ul{
+		flex-direction: column;
 	}
-	#contact-section h2{
+	#contact-section h1{
 		font-size:18px;
-	}
-}
-@media only screen and (max-width: 684px){
-	nav ul li{
-		margin-right: 25px;
-	}
-	#contact-section h1{
-		font-size:20px;
 	}
 	#contact-section h2{
 		font-size:16px;
