@@ -1,4 +1,15 @@
-<script data-cfasync="false" type="text/javascript" src="../assets/javascripts/form_submission_handler.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script>
+  $('.gform').submit(function(e){
+  	e.preventDefault();
+   	$('.submitButton').replaceWith('<div><img src="https://img.icons8.com/cotton/64/000000/reading-confirmation.png"></div>');
+  });
+</script> -->
+<script>
+  $( "#form" ).submit(function( event ) {
+    alert( "Handler for .submit() called." );
+  });
+</script>
 <section id="contact-section">
   <h1>Thank you for taking your time to look at my portfolio.</h1>
   <h2>You can contact me through any of the below mediums</h2>
@@ -12,10 +23,10 @@
           <p id="mobile-no">Phone: +91 8667457348</p>
         </div>
         <div class="contactForm">
-          <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxwMQxmKtl35MhitmiXWFD8llm0q9nL7avqe_SF_sEfawer9eDR/exec" data-email="gogulaanand02@gmail.com">
+          <form id="form" class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxwMQxmKtl35MhitmiXWFD8llm0q9nL7avqe_SF_sEfawer9eDR/exec" data-email="gogulaanand02@gmail.com">
             <label><input type="name" placeholder="Name" class="margin25" name="name"></label>
             <label><input type="email" placeholder="Email" class="margin25" name="email"></label>
-            <label><input type="phone" placeholder="Contact No" class="margin25" name="phone"></label>
+            <label><input type="phone" pattern="\d+" placeholder="Contact No" class="margin25" name="phone"></label>
             <label>
               <textarea class="margin25" placeholder="Message" rows='10' name="message"></textarea>
             </label>
@@ -36,4 +47,5 @@
     <a href="https://github.com/Gogulaanand" target="_blank" class="fa fa-github fa-3x" id="social-icons"></a>
     <a href="https://codepen.io/RGog" target="_blank" class="fa fa-codepen fa-3x" id="social-icons"></a>
   </div>
+  <script data-cfasync="false" type="text/javascript" src="../assets/javascripts/form_submission_handler.js"></script>
 </section>
