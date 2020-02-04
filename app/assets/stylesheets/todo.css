@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
 *{
-	font-family: 'Montserrat';
+	font-family: 'Helvetica Neue', 'Montserrat', 'Open Sans', sans-serif;
 }
 #container{
 	display: flex;
@@ -90,7 +91,7 @@ input[type='checkbox']{
 		grid-template-rows: repeat(3, 1fr);
 		grid-template-areas:
 			"todo" "pending" "completed";
-	}	
+	}
 	.task{
 		grid-template-columns: 1fr 150px 1fr 1fr;
 	}
@@ -104,5 +105,3 @@ input[type='checkbox']{
 		width: 250px;
 	}
 }
-
-

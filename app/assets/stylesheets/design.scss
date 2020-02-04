@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
+*{
+	font-family: 'Montserrat', 'Open Sans', sans-serif;
+}
 @mixin proj-card-background{
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -36,7 +40,7 @@
 	}
 }
 body{
-	font-family: 'Helvetica Neue', 'Montserrat',sans-serif;
+	font-family: 'Helvetica Neue', 'Montserrat','Open Sans',sans-serif;
 	@include flex-col;
 	align-items: center;
 	text-align: center;
