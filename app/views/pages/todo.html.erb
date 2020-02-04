@@ -1,0 +1,35 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../assets/stylesheets/todo.css" />
+</head>
+<body>
+<div id="container">
+	<div id="taskEntrySection">
+	<input type="text" placeholder="Add Task" id="taskBar" onfocus = "this.value=''">
+	<img src="https://img.icons8.com/material/48/000000/add.png" alt="add task button" id="addTask">
+	</div>
+	<div id="board">
+		<div id="todo">
+			<h2>TODO</h2>
+			<hr/>
+			<div id="taskList">
+			</div>
+		</div>
+		<div id="pending">
+			<h2>PENDING</h2>
+			<hr/>
+			<div id="pendingList">
+			</div>
+		</div>
+		<div id="completed">
+			<h2>COMPLETED</h2>
+			<hr/>
+			<div id="completedList">
+			</div>
+		</div>
+	</div>
+</div>
+<%= javascript_include_tag('todo.js') %>
+</body>

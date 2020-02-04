@@ -102,7 +102,7 @@ nav ul li a:hover:after{
 	overflow: hidden;
 	white-space: nowrap;
 	border-right: 0.1em solid #000;
-	animation: typing 2s steps(40,end), 
+	animation: typing 2s steps(40,end),
 			   blinking-caret 0.75s infinite;
 }
 @keyframes typing{
@@ -170,6 +170,10 @@ nav ul li a:hover:after{
 	background-image: url(https://screenshot.codepen.io/3887570.abzEMQP.small.41a83099-db7f-4305-9c9e-e1beace262b9.png);
 	@include proj-card-background;
 }
+#proj7{
+	background-image: url(https://screenshot.codepen.io/3887570.BayMVRq.1774707d-e907-4bba-92b6-a8aaa3142209.png);
+	@include proj-card-background;
+}
 #hide-svg{
 	display: none;
 }
@@ -179,7 +183,7 @@ nav ul li a:hover:after{
 	margin: 25px;
 	border-radius: 10px;
 	background: linear-gradient(225deg, #ffffff, #e6e6e6);
-	box-shadow: -30px 30px 60px #d9d9d9, 
+	box-shadow: -30px 30px 60px #d9d9d9,
             30px -30px 60px #ffffff;
 	background: #fff;
 	transition: ease 1s all;
@@ -243,7 +247,7 @@ svg{
 	justify-content: space-between;
 	border-radius: 27px;
 	background: #808080;
-	box-shadow: 10px 10px 33px #babbb9, 
+	box-shadow: 10px 10px 33px #babbb9,
             -10px -10px 33px #f2f3f1;
 	text-align: center;
 	border-radius: 8%
@@ -262,7 +266,7 @@ input{
 	font-size: 16px;
 	width: 80%;
 	border: none;
-	border-bottom: 2px solid #000; 
+	border-bottom: 2px solid #000;
 	border-bottom-color: #ababab;
 }
 input:focus{
