@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 
   def todo
   end
+
+  def game
+  end
 end

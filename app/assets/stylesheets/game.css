@@ -1,0 +1,112 @@
+* {
+	box-sizing: border-box;
+}
+
+#setup {
+	display: flex;
+	justify-content: center;
+}
+
+#board {
+	margin: auto auto;
+}
+
+.card {
+	width: 120px;
+	height: 120px;
+	border: 1px solid #ebf5fc;
+	background: #ebf5fc;
+	box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+		3px 3px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
+.center {
+	margin: auto auto;
+}
+
+.pair1 {
+	background: url(https://img.icons8.com/emoji/96/000000/zany-face.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.pair2 {
+	background: url(https://img.icons8.com/emoji/96/000000/astonished-face.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.pair3 {
+	background: url(https://img.icons8.com/emoji/96/000000/smiling-face-with-sunglasses.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.pair4 {
+	background: url(https://img.icons8.com/emoji/96/000000/growing-heart.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.pair5 {
+	background: url(https://img.icons8.com/emoji/96/000000/hugging-face.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.pair8 {
+	background: url(https://img.icons8.com/emoji/96/000000/smiling-face-with-heart-eyes.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.pair7 {
+	background: url(https://img.icons8.com/emoji/96/000000/rolling-on-the-floor-laughing.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.pair6 {
+	background: url(https://img.icons8.com/emoji/96/000000/beaming-face-with-smiling-eyes.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.fadeOut {
+	animation: fadeOut 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+	}
+}
+
+.fadeIn {
+	animation: fadeIn 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+#reset {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
