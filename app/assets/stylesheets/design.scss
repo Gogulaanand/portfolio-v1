@@ -178,6 +178,10 @@ nav ul li a:hover:after{
 	background-image: url(https://screenshot.codepen.io/3887570.BayMVRq.1774707d-e907-4bba-92b6-a8aaa3142209.png);
 	@include proj-card-background;
 }
+#proj8{
+	background-image: url('../images/matching_game.png');
+	@include proj-card-background;
+}
 #hide-svg{
 	display: none;
 }
