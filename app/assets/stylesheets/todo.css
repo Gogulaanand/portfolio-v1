@@ -27,7 +27,7 @@
 	filter: invert(97%) sepia(14%) saturate(4200%) hue-rotate(34deg) brightness(89%) contrast(82%);
 }
 .emptyAlert{
-	border-bottom: 1px solid red;
+	border-bottom: 2px red solid !important;
 }
 hr{
 	width: 350px;

@@ -3,6 +3,11 @@ var button = document.getElementById('addTask');
 var todo = document.getElementById('todo');
 var pending = document.getElementById('pending');
 var completed = document.getElementById('completed');
+// var localStorage;
+// if(typeof(Storage)!=="undefined"){
+// 		localStorage = true;
+// }
+// else localStorage = false;
 var moveIcon = "<img src='https://img.icons8.com/metro/26/000000/forward-arrow.png' alt='move the task to pending section icon' id='moveIcon' onclick='movetoPending(this)'>";
 var deleteIcon = "<img src='https://img.icons8.com/material-rounded/24/000000/delete.png' alt='delete the task icon' id='deleteIcon' onclick='deleteTask(this)'>";
 input.addEventListener('keyup', function(event){
@@ -15,12 +20,13 @@ input.addEventListener('keyup', function(event){
 button.addEventListener('click', function(){
 	var task = input.value;
 	if(task==''){
-		input.classList.add('emptyAlert');
+		input.classList.add('emptyAlert', 'animated','shake');
+		setTimeout(()=>{input.classList.remove('emptyAlert', 'animated', 'shake')}, 1300);
 	}
-	else{
+	else{ 
 		adder(task);
 		if(input.classList.contains('emptyAlert')){
-			input.classList.remove('emptyAlert');
+			input.classList.remove('emptyAlert', 'animated', 'shake');
 		}
 	}
 });
@@ -41,6 +47,10 @@ function adder(task){
 
 	todo.appendChild(div);
 	i+=1;
+	// if (localStorage){
+	// 	window.localStorage.setItem('todo', JSON.stringify(div));
+	// }
+	// console.log(JSON.parse(window.localStorage.getItem('todo')));
 }
 
 function movetoPending(move){

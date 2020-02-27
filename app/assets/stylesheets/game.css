@@ -11,6 +11,17 @@
 	margin: auto auto;
 }
 
+/* #generate{
+	margin-left: 20px;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: ;
+	color: #f8faff;
+	background-color: #ff0082;
+} */
+
 .card {
 	width: 120px;
 	height: 120px;
