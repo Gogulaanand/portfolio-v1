@@ -92,6 +92,32 @@
 	border: 60px solid #ebf5fc;
 }
 
+.pair9 {
+	background: url(https://img.icons8.com/emoji/96/000000/partying-face.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
+.pair10 {
+	background: url(https://img.icons8.com/emoji/96/000000/beaming-face-with-smiling-eyes.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+.pair11 {
+	background: url(https://img.icons8.com/emoji/96/000000/shushing-face.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+.pair12 {
+	background: url(https://img.icons8.com/color/96/000000/baby-yoda.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 60px solid #ebf5fc;
+}
+
 .fadeOut {
 	animation: fadeOut 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
