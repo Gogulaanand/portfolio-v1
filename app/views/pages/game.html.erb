@@ -7,18 +7,16 @@
 </head>
 <body>
 	<div id="setup">
-		<p>Feel Like taking up a Challenge ? <br/> Choose a larger set from the dropdown :
-	<select id="pairsCount">
-		<option value="6">6</option>
-		<option value="8">8</option>
-		<option value="12">12</option>
-	</select>
-	<button type="button" onClick="getDesiredCount('pairsCount')">Generate</button></p>
+		<p>Choose a larger set from the dropdown :
+			<select id="pairsCount">
+				<option value="6">6</option>
+				<option value="8">8</option>
+				<option value="12">12</option>
+			</select>
+			<button type="button" onClick="getDesiredCount('pairsCount')" id='generate'>Generate</button>
+		</p>
 	</div>
 	<div id="board">
 	</div>
-	<div id="reset">
-	<button type="button" onClick="getDesiredCount('pairsCount')">Reset</button>
-  </div>
   <%= javascript_include_tag('game.js') %>
 </body>

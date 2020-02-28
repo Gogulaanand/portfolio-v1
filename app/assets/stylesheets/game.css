@@ -5,13 +5,14 @@
 #setup {
 	display: flex;
 	justify-content: center;
+	margin-top: 50px;
 }
 
 #board {
 	margin: auto auto;
 }
 
-/* #generate{
+#generate{
 	margin-left: 20px;
 	width: 100px;
 	height: 30px;
@@ -19,8 +20,17 @@
 	border: none;
 	box-shadow: ;
 	color: #f8faff;
-	background-color: #ff0082;
-} */
+	background-color: #505050;
+	cursor: pointer;
+}
+
+#generate:hover,
+#generate:focus{
+	background: #000;
+}
+#generate:active{
+	transform: scale(0.99);
+}
 
 .card {
 	width: 120px;
